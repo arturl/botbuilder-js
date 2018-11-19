@@ -24,7 +24,8 @@ export const channels: any = {
     directline: 'directline',
     webchat: 'webchat',
     console: 'console',
-    cortana: 'cortana'
+    cortana: 'cortana',
+    line: 'line'
 };
 
 /**
@@ -44,6 +45,7 @@ export function supportsSuggestedActions(channelId: string, buttonCnt: number = 
         case channels.emulator:
         case channels.directline:
         case channels.webchat:
+        case channels.line:
             return (buttonCnt <= 100);
         default:
             return false;
@@ -66,6 +68,7 @@ export function supportsCardActions(channelId: string, buttonCnt: number = 100):
         case channels.directline:
         case channels.webchat:
         case channels.cortana:
+        case channels.line:
             return (buttonCnt <= 100);
         default:
             return false;
